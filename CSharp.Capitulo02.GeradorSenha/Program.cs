@@ -6,14 +6,13 @@ namespace CSharp.Capitulo02.GeradorSenha
     {
         static void Main(string[] args)
         {
-            Console.Write("Informe a quantidade de dígitos da senha (entre 4 e 10, pares): ");
+            int quantidadeDigitos;
 
-            var quantidadeDigitos = 0;
-
-            while (quantidadeDigitos == 0)
+            do
             {
+                Console.Write("Informe a quantidade de dígitos da senha (entre 4 e 10, pares): ");
                 quantidadeDigitos = ObterQuantidadeDigitos();
-            }
+            } while (quantidadeDigitos == 0);
 
             var senha = "";
             var randomico = new Random();
