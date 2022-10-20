@@ -1,4 +1,6 @@
-﻿namespace Fintech.Dominio.Entidades
+﻿using System;
+
+namespace Fintech.Dominio.Entidades
 {
     public class Endereco
     {

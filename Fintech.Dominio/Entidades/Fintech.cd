@@ -35,12 +35,12 @@
       <FileName>Entidades\Cliente.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="EnderecoResidencial" />
       <Property Name="Sexo" />
+      <Property Name="EnderecoResidencial" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Fintech.Dominio.Entidades.Endereco" Collapsed="true">
-    <Position X="10.25" Y="4.75" Width="1.5" />
+    <Position X="13.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAIEAAAAAACAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Entidades\Endereco.cs</FileName>
