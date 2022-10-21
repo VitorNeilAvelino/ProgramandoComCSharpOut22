@@ -14,18 +14,9 @@ namespace CSharp.Capitulo02.GeradorSenha
                 quantidadeDigitos = ObterQuantidadeDigitos();
             } while (quantidadeDigitos == 0);
 
-            var senha = "";
-            //var randomico = new Random();
+            var senha = new Senha(quantidadeDigitos);
 
-            //for (int i = 0; i < quantidadeDigitos; i++)
-            //{
-            //    //var algarismo = randomico.Next(1, 61);
-            //    var algarismo = randomico.Next(10);
-
-            //    senha += algarismo;
-            //}
-
-            Console.WriteLine($"Senha gerada: {senha}");
+            Console.WriteLine($"Senha gerada: {senha.Valor}");
         }
 
         private static int ObterQuantidadeDigitos()

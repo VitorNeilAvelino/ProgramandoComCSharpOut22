@@ -22,5 +22,27 @@ namespace CSharp.Capitulo02.GeradorSenha.Tests
 
             Console.WriteLine(valorSenha);
         }
+
+        [TestMethod]
+        public void ConstrutorSemParametroDeveRetornarSenhaMinima()
+        {
+            var senha = new Senha();            
+
+            Assert.AreEqual(senha.Valor.Length, Senha.TamanhoMinimo);
+
+            Console.WriteLine(senha.Valor);
+        }
+
+        [TestMethod]
+        [DataRow(4)]
+        [DataRow(6)]
+        [DataRow(8)]
+        [DataRow(10)]
+        public void ConstrutorParametrizadoDeveRetornarSenhaEspecifica(int tamanho)
+        {
+            var senha = new Senha(tamanho);
+            
+            Console.WriteLine(senha.Valor);
+        }
     }
 }
