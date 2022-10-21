@@ -15,15 +15,15 @@ namespace CSharp.Capitulo02.GeradorSenha
             } while (quantidadeDigitos == 0);
 
             var senha = "";
-            var randomico = new Random();
+            //var randomico = new Random();
 
-            for (int i = 0; i < quantidadeDigitos; i++)
-            {
-                //var algarismo = randomico.Next(1, 61);
-                var algarismo = randomico.Next(10);
+            //for (int i = 0; i < quantidadeDigitos; i++)
+            //{
+            //    //var algarismo = randomico.Next(1, 61);
+            //    var algarismo = randomico.Next(10);
 
-                senha += algarismo;
-            }
+            //    senha += algarismo;
+            //}
 
             Console.WriteLine($"Senha gerada: {senha}");
         }

@@ -9,8 +9,8 @@
     <TabControl>
         <TabItem Header="Clientes">
             <TabControl TabStripPlacement="Left">
-                <TabItem Header="Pesquisa">
-
+                <TabItem Header="Pesquisa" Name="pesquisaClienteTabItem">
+                    <DataGrid x:Name="clienteDataGrid" AutoGenerateColumns="True"/>
                 </TabItem>
                 <TabItem Header="Cadastro">
                     <StackPanel>

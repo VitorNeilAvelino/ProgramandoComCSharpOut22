@@ -21,6 +21,8 @@ namespace Fintech.Correntista.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Cliente> clientes = new();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +34,8 @@ namespace Fintech.Correntista.Wpf
             sexoComboBox.Items.Add(Sexo.Feminino);
             sexoComboBox.Items.Add(Sexo.Masculino);
             sexoComboBox.Items.Add(Sexo.Outro);
+
+            clienteDataGrid.ItemsSource = clientes;
         }
 
         private void incluirClienteButton_Click(object sender, RoutedEventArgs e)
@@ -49,6 +53,25 @@ namespace Fintech.Correntista.Wpf
             endereco.Numero = numeroLogradouroTextBox.Text;
 
             cliente.EnderecoResidencial = endereco;
+
+            clientes.Add(cliente);
+
+            MessageBox.Show("Cliente cadastrado com sucesso.");
+            LimparControlesCliente();
+            clienteDataGrid.Items.Refresh();
+            pesquisaClienteTabItem.Focus();
+        }
+
+        private void LimparControlesCliente()
+        {
+            cpfTextBox.Clear();
+            nomeTextBox.Text = "";
+            dataNascimentoTextBox.Text = null;
+            sexoComboBox.SelectedIndex = -1;
+            logradouroTextBox.Text = string.Empty;
+            numeroLogradouroTextBox.Clear();
+            cidadeTextBox.Clear();
+            cepTextBox.Clear();
         }
     }
 }
