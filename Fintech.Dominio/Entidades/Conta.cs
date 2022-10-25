@@ -2,6 +2,13 @@
 {
     public abstract class Conta
     {
+        public Conta(Agencia agencia, int numero, string digitoVerificador)
+        {
+            Agencia = agencia;
+            Numero = numero;
+            DigitoVerificador = digitoVerificador;
+        }
+
         public int Id { get; set; }
         public int Numero { get; set; }
         public string DigitoVerificador { get; set; }
