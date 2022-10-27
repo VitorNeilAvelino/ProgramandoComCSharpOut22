@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fintech.Correntista.Wpf", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Capitulo02.GeradorSenhaTests", "CSharp.Capitulo02.GeradorSenhaTests\CSharp.Capitulo02.GeradorSenhaTests.csproj", "{23A3B194-93EB-4361-8541-AFB9EB05B827}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fintech.Repositorios.SistemaArquivos", "Fintech.Repositorios.SistemaArquivos\Fintech.Repositorios.SistemaArquivos.csproj", "{EC605D91-E738-4B01-B57F-B2EB5D00759E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fintech.Repositorios.SistemaArquivos", "Fintech.Repositorios.SistemaArquivos\Fintech.Repositorios.SistemaArquivos.csproj", "{EC605D91-E738-4B01-B57F-B2EB5D00759E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fintech.Repositorios.SistemaArquivosTests", "Fintech.Repositorios.SistemaArquivosTests\Fintech.Repositorios.SistemaArquivosTests.csproj", "{3C6E1E29-398C-49C0-92B9-21C51E60BC85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{EC605D91-E738-4B01-B57F-B2EB5D00759E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC605D91-E738-4B01-B57F-B2EB5D00759E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC605D91-E738-4B01-B57F-B2EB5D00759E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6E1E29-398C-49C0-92B9-21C51E60BC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6E1E29-398C-49C0-92B9-21C51E60BC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6E1E29-398C-49C0-92B9-21C51E60BC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6E1E29-398C-49C0-92B9-21C51E60BC85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{EB663812-09D4-432F-B68B-53212D58E677} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
 		{5155BA1B-8F48-4224-96CB-797A78B33479} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
 		{EC605D91-E738-4B01-B57F-B2EB5D00759E} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
+		{3C6E1E29-398C-49C0-92B9-21C51E60BC85} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4C1A3B0-0AF0-433D-9923-CBC3C324D5A0}

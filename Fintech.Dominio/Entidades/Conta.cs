@@ -19,9 +19,10 @@ namespace Fintech.Dominio.Entidades
         public Cliente Cliente { get; set; }
         public List<Movimento> Movimentos { get; set; } = new List<Movimento>();
 
-        public virtual void EfetuarOperacao(decimal valor, TipoOperacao tipoOperacao, decimal limite = 0)
+        public virtual Movimento EfetuarOperacao(decimal valor, TipoOperacao tipoOperacao, decimal limite = 0)
         {
             var sucesso = true;
+            Movimento movimento = null;
 
             switch (tipoOperacao)
             {
@@ -41,7 +42,15 @@ namespace Fintech.Dominio.Entidades
                     break;
             }
 
-            if (sucesso) Movimentos.Add(new Movimento(valor, tipoOperacao));
+            if (sucesso) 
+            {
+                movimento = new Movimento(valor, tipoOperacao, this);
+                //movimento.Conta = this;
+
+                Movimentos.Add(movimento); 
+            }
+
+            return movimento;
         }
     }
 }
