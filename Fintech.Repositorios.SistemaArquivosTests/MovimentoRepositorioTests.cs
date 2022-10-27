@@ -12,11 +12,11 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
     [TestClass()]
     public class MovimentoRepositorioTests
     {
+        private readonly MovimentoRepositorio movimentoRepositorio = new ("Dados\\Movimento.txt");
+
         [TestMethod()]
         public void InserirTest()
         {
-            var movimentoRepositorio = new MovimentoRepositorio("Dados\\Movimento.txt");
-
             var agencia = new Agencia { Numero = 123 };
             var conta = new ContaCorrente(agencia, 456, "X");
 
@@ -24,6 +24,12 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
             //movimento.Conta = conta;
 
             movimentoRepositorio.Inserir(movimento);
+        }
+
+        [TestMethod()]
+        public void SelecionarTest()
+        {
+            var movimentos = movimentoRepositorio.Selecionar(123, 456);
         }
     }
 }
