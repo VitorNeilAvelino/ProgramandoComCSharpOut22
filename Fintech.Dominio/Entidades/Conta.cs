@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Fintech.Dominio.Entidades
 {
@@ -14,10 +15,24 @@ namespace Fintech.Dominio.Entidades
         public int Id { get; set; }
         public int Numero { get; set; }
         public string DigitoVerificador { get; set; }
-        public decimal Saldo { get; set; }
+        public decimal Saldo 
+        {
+            get => TotalDeposito - TotalSaque;
+            private set { } 
+        }
         public Agencia Agencia { get; set; }
         public Cliente Cliente { get; set; }
         public List<Movimento> Movimentos { get; set; } = new List<Movimento>();
+        public decimal TotalDeposito 
+        {
+            get 
+            {
+                return Movimentos.Where(m => m.TipoOperacao == TipoOperacao.Deposito).Sum(m => m.Valor);
+            } 
+            //set; 
+        }
+
+        public decimal TotalSaque => Movimentos.Where(m => m.TipoOperacao == TipoOperacao.Saque).Sum(m => m.Valor);
 
         public virtual Movimento EfetuarOperacao(decimal valor, TipoOperacao tipoOperacao, decimal limite = 0)
         {
