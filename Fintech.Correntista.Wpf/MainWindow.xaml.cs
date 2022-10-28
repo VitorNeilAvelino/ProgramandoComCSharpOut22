@@ -2,6 +2,7 @@
 using Fintech.Repositorios.SistemaArquivos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -212,18 +213,42 @@ namespace Fintech.Correntista.Wpf
 
         private void incluirOperacaoButton_Click(object sender, RoutedEventArgs e)
         {
-            var conta = (Conta)contaComboBox.SelectedItem;
-            var operacao = (TipoOperacao)operacaoComboBox.SelectedItem;
-            var valor = Convert.ToDecimal(valorTextBox.Text);
+            try
+            {
+                var conta = (Conta)contaComboBox.SelectedItem;
+                var operacao = (TipoOperacao)operacaoComboBox.SelectedItem;
+                var valor = Convert.ToDecimal(valorTextBox.Text);
 
-            var movimento = conta.EfetuarOperacao(valor, operacao);
+                var movimento = conta.EfetuarOperacao(valor, operacao);
 
-            movimentoRepositorio.Inserir(movimento);
+                movimentoRepositorio.Inserir(movimento);
 
-            movimentacaoDataGrid.ItemsSource = conta.Movimentos;
-            movimentacaoDataGrid.Items.Refresh();
+                movimentacaoDataGrid.ItemsSource = conta.Movimentos;
+                movimentacaoDataGrid.Items.Refresh();
 
-            saldoTextBox.Text = conta.Saldo.ToString("C");
+                saldoTextBox.Text = conta.Saldo.ToString("C");
+            }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show($"O arquivo {ex.FileName} não foi encontrado.");
+            }
+            catch (DirectoryNotFoundException)
+            {
+                MessageBox.Show($"O diretório {Properties.Settings.Default.CaminhoArquivoMovimento} não foi encontrado.");
+            }
+            catch (SaldoInsuficienteException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception excecao)
+            {
+                MessageBox.Show("Eita! Algo deu errado e em breve teremos uma solução.");
+                //Logar(excecao); // log4Net
+            }
+            finally
+            {
+                // É sempre executado, mesmo que haja um return no código.
+            }
         }
     }
 }

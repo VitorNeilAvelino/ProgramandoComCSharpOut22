@@ -36,7 +36,7 @@ namespace Fintech.Dominio.Entidades
 
         public virtual Movimento EfetuarOperacao(decimal valor, TipoOperacao tipoOperacao, decimal limite = 0)
         {
-            var sucesso = true;
+            //var sucesso = true;
             Movimento movimento = null;
 
             switch (tipoOperacao)
@@ -52,18 +52,17 @@ namespace Fintech.Dominio.Entidades
                     }
                     else
                     {
-                        sucesso = false;
+                        throw new SaldoInsuficienteException();
                     }
                     break;
             }
 
-            if (sucesso) 
-            {
+            //if (sucesso) 
+            //{
                 movimento = new Movimento(valor, tipoOperacao, this);
-                //movimento.Conta = this;
 
                 Movimentos.Add(movimento); 
-            }
+            //}
 
             return movimento;
         }
