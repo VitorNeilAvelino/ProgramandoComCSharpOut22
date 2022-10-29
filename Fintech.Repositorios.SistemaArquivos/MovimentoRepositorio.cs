@@ -1,4 +1,5 @@
 ﻿using Fintech.Dominio.Entidades;
+using Fintech.Dominio.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Fintech.Repositorios.SistemaArquivos
 {
-    public class MovimentoRepositorio
+    public class MovimentoRepositorio : IMovimentoRepositorio
     {
         public MovimentoRepositorio(string caminho)
         {
