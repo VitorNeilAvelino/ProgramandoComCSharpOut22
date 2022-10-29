@@ -199,16 +199,20 @@ namespace Fintech.Correntista.Wpf
             saldoTextBox.Clear();
         }
 
-        private void contaComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async /*Task*/ void contaComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (contaComboBox.SelectedItem == null) return;
 
+            mainSpinner.Visibility = Visibility.Visible;
+
             var conta = (Conta)contaComboBox.SelectedItem;
 
-            conta.Movimentos = movimentoRepositorio.Selecionar(conta.Agencia.Numero, conta.Numero);
+            conta.Movimentos = await movimentoRepositorio.SelecionarAsync(conta.Agencia.Numero, conta.Numero);
 
             movimentacaoDataGrid.ItemsSource = conta.Movimentos;
             saldoTextBox.Text = conta.Saldo.ToString("C");
+
+            mainSpinner.Visibility = Visibility.Hidden;
         }
 
         private void incluirOperacaoButton_Click(object sender, RoutedEventArgs e)
