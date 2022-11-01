@@ -4,6 +4,14 @@ namespace Fintech.Dominio.Entidades
 {
     public class Movimento
     {
+        /// <summary>
+        /// Construtor vazio - imposição do Dapper.
+        /// </summary>
+        public Movimento()
+        {
+
+        }
+
         public Movimento(decimal valor, TipoOperacao tipoOperacao)
         {
             Valor = valor;

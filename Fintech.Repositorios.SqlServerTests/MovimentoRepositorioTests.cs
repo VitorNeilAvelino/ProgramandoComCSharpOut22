@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Fintech.Repositorios.SqlServer;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Fintech.Dominio.Entidades;
 
 namespace Fintech.Repositorios.SqlServer.Tests
@@ -20,10 +15,21 @@ namespace Fintech.Repositorios.SqlServer.Tests
             var agencia = new Agencia { Numero = 123 };
             var conta = new ContaCorrente(agencia, 456, "X");
 
-            var movimento = new Movimento(54, TipoOperacao.Deposito, conta);
+            var movimento = new Movimento(58, TipoOperacao.Deposito, conta);
             //movimento.Conta = conta;
 
             movimentoRepositorio.Inserir(movimento);
+        }
+
+        [TestMethod()]
+        public void SelecionarAsyncTest()
+        {
+            var movimentos = movimentoRepositorio.SelecionarAsync(0, 456).Result;
+
+            foreach (var movimento in movimentos)
+            {
+                Console.WriteLine($"{movimento.Data} - {movimento.Operacao} - {movimento.Valor:c}");
+            }
         }
     }
 }

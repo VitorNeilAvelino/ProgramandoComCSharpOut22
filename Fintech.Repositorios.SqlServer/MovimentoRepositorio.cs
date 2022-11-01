@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Fintech.Dominio.Entidades;
 using Fintech.Dominio.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -37,6 +36,8 @@ namespace Fintech.Repositorios.SqlServer
 
             using (var conexao = new SqlConnection(stringConexao)) // descarte seguro de memória
             {
+                //return (await conexao.QueryAsync<Movimento>(instrucao, new { numeroConta })).ToList();
+                
                 var movimentos = await conexao.QueryAsync<Movimento>(instrucao, new { numeroConta });
 
                 return movimentos.ToList();
