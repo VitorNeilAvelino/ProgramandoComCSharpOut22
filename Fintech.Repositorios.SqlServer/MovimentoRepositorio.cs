@@ -43,5 +43,26 @@ namespace Fintech.Repositorios.SqlServer
                 return movimentos.ToList();
             }
         }
+
+        public void Atualizar(Movimento movimento)
+        {
+            var instrucao = @"Update Movimento
+                                        set Data = @Data,
+                                             Valor = @Valor,
+                                             Operacao = @Operacao
+                                        where Id = @Id";
+
+            using var conexao = new SqlConnection(stringConexao);
+            conexao.Execute(instrucao, movimento);
+        }
+
+        public void Excluir(int id)
+        {
+            var instrucao = @"Delete Movimento
+                                        where Id = @Id";
+
+            using var conexao = new SqlConnection(stringConexao);
+            conexao.Execute(instrucao, new { Id = id });
+        }
     }
 }
