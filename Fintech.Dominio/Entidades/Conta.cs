@@ -27,12 +27,12 @@ namespace Fintech.Dominio.Entidades
         {
             get 
             {
-                return Movimentos.Where(m => m.TipoOperacao == TipoOperacao.Deposito).Sum(m => m.Valor);
+                return Movimentos.Where(m => m.Operacao == TipoOperacao.Deposito).Sum(m => m.Valor);
             } 
             //set; 
         }
 
-        public decimal TotalSaque => Movimentos.Where(m => m.TipoOperacao == TipoOperacao.Saque).Sum(m => m.Valor);
+        public decimal TotalSaque => Movimentos.Where(m => m.Operacao == TipoOperacao.Saque).Sum(m => m.Valor);
 
         public virtual Movimento EfetuarOperacao(decimal valor, TipoOperacao tipoOperacao, decimal limite = 0)
         {

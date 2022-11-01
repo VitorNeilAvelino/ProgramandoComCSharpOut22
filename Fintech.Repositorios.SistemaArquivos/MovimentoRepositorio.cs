@@ -20,7 +20,7 @@ namespace Fintech.Repositorios.SistemaArquivos
         public void Inserir(Movimento movimento)
         {
             var registro = $"{movimento.Guid}|{movimento.Conta.Agencia.Numero}|" +
-                $"{movimento.Conta.Numero}|{movimento.Data}|{(int)movimento.TipoOperacao}|{movimento.Valor}";
+                $"{movimento.Conta.Numero}|{movimento.Data}|{(int)movimento.Operacao}|{movimento.Valor}";
 
             if (!Directory.Exists("Dados"))
             {

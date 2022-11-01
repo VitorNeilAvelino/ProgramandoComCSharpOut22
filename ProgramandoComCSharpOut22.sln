@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Capitulo02.GeradorSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fintech.Repositorios.SistemaArquivos", "Fintech.Repositorios.SistemaArquivos\Fintech.Repositorios.SistemaArquivos.csproj", "{EC605D91-E738-4B01-B57F-B2EB5D00759E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fintech.Repositorios.SistemaArquivosTests", "Fintech.Repositorios.SistemaArquivosTests\Fintech.Repositorios.SistemaArquivosTests.csproj", "{3C6E1E29-398C-49C0-92B9-21C51E60BC85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fintech.Repositorios.SistemaArquivosTests", "Fintech.Repositorios.SistemaArquivosTests\Fintech.Repositorios.SistemaArquivosTests.csproj", "{3C6E1E29-398C-49C0-92B9-21C51E60BC85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fintech.Repositorios.SqlServer", "Fintech.Repositorios.SqlServer\Fintech.Repositorios.SqlServer.csproj", "{E700ABBC-F6CA-49AA-8534-6BB39DD0BEFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fintech.Repositorios.SqlServer", "Fintech.Repositorios.SqlServer\Fintech.Repositorios.SqlServer.csproj", "{E700ABBC-F6CA-49AA-8534-6BB39DD0BEFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fintech.Repositorios.SqlServerTests", "Fintech.Repositorios.SqlServerTests\Fintech.Repositorios.SqlServerTests.csproj", "{94439B18-743C-4CDE-9AB6-C4BA20F1162E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{E700ABBC-F6CA-49AA-8534-6BB39DD0BEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E700ABBC-F6CA-49AA-8534-6BB39DD0BEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E700ABBC-F6CA-49AA-8534-6BB39DD0BEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94439B18-743C-4CDE-9AB6-C4BA20F1162E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94439B18-743C-4CDE-9AB6-C4BA20F1162E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94439B18-743C-4CDE-9AB6-C4BA20F1162E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94439B18-743C-4CDE-9AB6-C4BA20F1162E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{EC605D91-E738-4B01-B57F-B2EB5D00759E} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
 		{3C6E1E29-398C-49C0-92B9-21C51E60BC85} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
 		{E700ABBC-F6CA-49AA-8534-6BB39DD0BEFD} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
+		{94439B18-743C-4CDE-9AB6-C4BA20F1162E} = {B6380AA0-D16D-4335-B5E8-5BD1E86EF1B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4C1A3B0-0AF0-433D-9923-CBC3C324D5A0}

@@ -28,7 +28,7 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
 
             foreach (var movimento in movimentos)
             {
-                Console.WriteLine($"{movimento.Data} - {movimento.TipoOperacao} - {movimento.Valor}");
+                Console.WriteLine($"{movimento.Data} - {movimento.Operacao} - {movimento.Valor}");
             }
         }
     }
