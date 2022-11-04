@@ -15,11 +15,14 @@ namespace Fintech.Dominio.Entidades
         public int Id { get; set; }
         public int Numero { get; set; }
         public string DigitoVerificador { get; set; }
-        public decimal Saldo 
+        
+        // ToDo: OO - encapsulamento
+        public decimal Saldo
         {
             get => TotalDeposito - TotalSaque;
-            private set { } 
+            private set { }
         }
+
         public Agencia Agencia { get; set; }
         public Cliente Cliente { get; set; }
         public List<Movimento> Movimentos { get; set; } = new List<Movimento>();

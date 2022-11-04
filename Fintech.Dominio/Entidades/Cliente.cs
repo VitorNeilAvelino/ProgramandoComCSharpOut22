@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Fintech.Dominio.Entidades
 {
+    // ToDo: OO - classificação (abstração): classe
     public class Cliente
     {
         public int Id { get; set; }

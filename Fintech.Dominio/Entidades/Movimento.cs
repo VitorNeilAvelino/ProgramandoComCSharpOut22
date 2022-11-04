@@ -12,6 +12,7 @@ namespace Fintech.Dominio.Entidades
 
         }
 
+        // ToDo: OO - polimorfismo por sobrecarga
         public Movimento(decimal valor, TipoOperacao tipoOperacao)
         {
             Valor = valor;
