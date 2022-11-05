@@ -49,6 +49,25 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
             movimentos.ForEach(m => Console.WriteLine($"{m.Data} - {m.Operacao} - {m.Valor:c}"));
         }
 
+        [TestMethod]
+        public void DelegatePredicateTeste()
+        {
+            var movimentos = movimentoRepositorio.Selecionar(123, 456);
+
+            Predicate<Movimento> obterDepositos = m => m.Operacao == TipoOperacao.Deposito;
+
+            var depositos = movimentos.FindAll(EncontrarMovimentoDeposito);
+            depositos = movimentos.FindAll(obterDepositos);
+            depositos = movimentos.FindAll(m => m.Operacao == TipoOperacao.Deposito);
+
+            depositos.ForEach(d => Console.WriteLine($"{d.Operacao} - {d.Valor}"));
+        }
+
+        private bool EncontrarMovimentoDeposito(Movimento m)
+        {
+            return m.Operacao == TipoOperacao.Deposito;
+        }
+
         private void EscreverMovimento(Movimento movimento)
         {
             Console.WriteLine($"{movimento.Data} - {movimento.Operacao} - {movimento.Valor:c}");
