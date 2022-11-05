@@ -8,6 +8,6 @@
 ## De delegate à expressão lâmbda
 ### [Classe Calculadora](https://1drv.ms/v/s!Agb956IHC05ijdo01OwK5MCK4Ugong?e=ri5q2o)
 ### [Testes com Calculadora](https://1drv.ms/v/s!Agb956IHC05ijdo1WoULrNaMbPXY2w?e=M9Xb59)
-### [Delegate Action]()
-### [Delegate Predicate]()
+### [Delegate Action](https://1drv.ms/u/s!Agb956IHC05ijdo232s21P_ijmE3dw?e=J11nVh)
+### [Delegate Predicate](https://1drv.ms/v/s!Agb956IHC05ijdo3-7qkToHMzqTkfQ?e=TPP1hj)
 ### [Delegate Func]()
