@@ -4,24 +4,24 @@ namespace CSharp.Capitulo10.DelegateLambda.Testes
 {
     internal delegate int EfetuarOperacao(int valor1, int valor2);
 
-    internal class Calculadora
+    internal static class Calculadora
     {
-        private int Somar(int x, int y)
+        private static int Somar(int x, int y)
         {
             return x + y;
         }
 
-        private int Subtrair(int x, int y)
+        private static int Subtrair(int x, int y)
         {
             return x - y;
         }
 
-        private int Multiplicar(int x, int y, int z)
+        private static int Multiplicar(int x, int y, int z)
         {
             return x * y * z;
         }
 
-        public EfetuarOperacao ObterOperacao(TipoOperacao tipoOperacao)
+        public static EfetuarOperacao ObterOperacao(TipoOperacao tipoOperacao)
         {
             switch (tipoOperacao)
             {
