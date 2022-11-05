@@ -7,3 +7,7 @@
 
 ## De delegate à expressão lâmbda
 ### [Classe Calculadora](https://1drv.ms/v/s!Agb956IHC05ijdo01OwK5MCK4Ugong?e=ri5q2o)
+### [Testes com Calculadora](https://1drv.ms/v/s!Agb956IHC05ijdo1WoULrNaMbPXY2w?e=M9Xb59)
+### [Delegate Action]()
+### [Delegate Predicate]()
+### [Delegate Func]()
