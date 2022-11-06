@@ -115,5 +115,14 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
 
             movimentos.ForEach(m => Console.WriteLine($"{m.Data:d} - {m.Operacao} - {m.Valor:c}"));
         }
+
+        [TestMethod]
+        public void CountTeste()
+        {
+            var quantidadeDepositos = movimentoRepositorio.Selecionar(123, 456)
+                .Count(m => m.Operacao == TipoOperacao.Deposito);
+
+            Assert.AreEqual(quantidadeDepositos, 2);
+        }
     }
 }
