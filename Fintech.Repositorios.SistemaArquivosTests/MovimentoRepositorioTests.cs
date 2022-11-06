@@ -144,5 +144,18 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
 
             Assert.IsTrue(menorDeposito == 21);
         }
+
+        [TestMethod]
+        [DataRow(1, 5)]
+        [DataRow(2, 5)]
+        public void SkipTakeTeste(int numeroPagina, int registrosPorPagina)
+        {
+            var movimentos = movimentoRepositorio.Selecionar(123, 456)
+                .Skip((numeroPagina - 1) * registrosPorPagina)
+                .Take(registrosPorPagina)
+                .ToList();
+
+            movimentos.ForEach(m => Console.WriteLine($"{m.Data:d} - {m.Operacao} - {m.Valor:c}"));
+        }
     }
 }
