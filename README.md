@@ -18,4 +18,5 @@
 ### [Like](https://1drv.ms/v/s!Agb956IHC05ijdo8Z3csp2HRo4ExRw?e=8ULJge)
 ### [Min](https://1drv.ms/u/s!Agb956IHC05ijdo9FkBnlQOOoyd50g?e=0WihdX)
 ### [SkipTake](https://1drv.ms/u/s!Agb956IHC05ijdo-9A_QR2MtW45b-w?e=GDb39g)
-### [GroupBy]()
+### [GroupBy](https://1drv.ms/v/s!Agb956IHC05ijdo_ch-X6G5gL48Qyg?e=mrRfBL)
+### [Mais exemplos](https://github.com/VitorNeilAvelino/ImpactaCSharpAcessoDados/blob/master/Roteiro/ImpactaCSharp2/Impacta.Repositorios.Ef.Designer.Testes/LinqTeste.cs)
