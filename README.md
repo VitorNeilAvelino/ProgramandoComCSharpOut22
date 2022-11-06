@@ -11,3 +11,11 @@
 ### [Delegate Action](https://1drv.ms/u/s!Agb956IHC05ijdo232s21P_ijmE3dw?e=J11nVh)
 ### [Delegate Predicate](https://1drv.ms/v/s!Agb956IHC05ijdo3-7qkToHMzqTkfQ?e=TPP1hj)
 ### [Delegate Func](https://1drv.ms/v/s!Agb956IHC05ijdo42WnDnMiP257azg?e=KOYEWV)
+
+## LINQ
+### [OrderBy](https://1drv.ms/u/s!Agb956IHC05ijdo6timNyaRhYpJy7A?e=fcFFqk)
+### [Count]()
+### [Like]()
+### [Min]()
+### [SkipTake]()
+### [GroupBy]()
