@@ -17,5 +17,5 @@
 ### [Count](https://1drv.ms/u/s!Agb956IHC05ijdo7G_BchH7EKwSyXg?e=jmADjv)
 ### [Like](https://1drv.ms/v/s!Agb956IHC05ijdo8Z3csp2HRo4ExRw?e=8ULJge)
 ### [Min](https://1drv.ms/u/s!Agb956IHC05ijdo9FkBnlQOOoyd50g?e=0WihdX)
-### [SkipTake]()
+### [SkipTake](https://1drv.ms/u/s!Agb956IHC05ijdo-9A_QR2MtW45b-w?e=GDb39g)
 ### [GroupBy]()
