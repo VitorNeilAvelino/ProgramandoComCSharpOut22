@@ -124,5 +124,15 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
 
             Assert.AreEqual(quantidadeDepositos, 2);
         }
+
+        [TestMethod]
+        public void LikeTeste()
+        {
+            var movimentos = movimentoRepositorio.Selecionar(123, 456)
+                .Where(m => m.Data.ToString().Contains("26/10/2022"))
+                .ToList();
+
+            movimentos.ForEach(m => Console.WriteLine($"{m.Data:d} - {m.Operacao} - {m.Valor:c}"));
+        }
     }
 }
