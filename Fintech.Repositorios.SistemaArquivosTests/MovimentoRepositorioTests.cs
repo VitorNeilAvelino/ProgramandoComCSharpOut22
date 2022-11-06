@@ -157,5 +157,18 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
 
             movimentos.ForEach(m => Console.WriteLine($"{m.Data:d} - {m.Operacao} - {m.Valor:c}"));
         }
+
+        [TestMethod]
+        public void GroupByTeste()
+        {
+            var agrupamento = movimentoRepositorio.Selecionar(123, 456)
+                .GroupBy(m => m.Operacao)
+                .Select(g => new { Operacao = g.Key, Total = g.Sum(m => m.Valor) });
+
+            foreach (var item in agrupamento)
+            {
+                Console.WriteLine($"{item.Operacao}: {item.Total:c}");
+            }
+        }
     }
 }
