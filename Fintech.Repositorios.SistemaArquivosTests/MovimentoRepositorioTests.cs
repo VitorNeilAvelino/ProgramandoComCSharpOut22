@@ -100,5 +100,20 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
         {
             Console.WriteLine($"{movimento.Data} - {movimento.Operacao} - {movimento.Valor:c}");
         }
+
+        [TestMethod]
+        public void OrderByTeste()
+        {
+            var movimentos = movimentoRepositorio.Selecionar(123, 456)
+                .OrderBy(m => m.Data.Date)
+                .ThenBy(m => m.Operacao)
+                .ThenByDescending(m => m.Valor)
+                .ToList();
+
+            var primeiro = movimentos.First();
+            var ultimo = movimentos.Last();
+
+            movimentos.ForEach(m => Console.WriteLine($"{m.Data:d} - {m.Operacao} - {m.Valor:c}"));
+        }
     }
 }
