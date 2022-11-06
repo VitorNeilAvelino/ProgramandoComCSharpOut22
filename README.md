@@ -14,8 +14,8 @@
 
 ## LINQ
 ### [OrderBy](https://1drv.ms/u/s!Agb956IHC05ijdo6timNyaRhYpJy7A?e=fcFFqk)
-### [Count]()
-### [Like]()
+### [Count](https://1drv.ms/u/s!Agb956IHC05ijdo7G_BchH7EKwSyXg?e=jmADjv)
+### [Like](https://1drv.ms/v/s!Agb956IHC05ijdo8Z3csp2HRo4ExRw?e=8ULJge)
 ### [Min]()
 ### [SkipTake]()
 ### [GroupBy]()
