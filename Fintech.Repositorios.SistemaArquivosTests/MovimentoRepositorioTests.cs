@@ -134,5 +134,15 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
 
             movimentos.ForEach(m => Console.WriteLine($"{m.Data:d} - {m.Operacao} - {m.Valor:c}"));
         }
+
+        [TestMethod]
+        public void MinTeste()
+        {
+            var menorDeposito = movimentoRepositorio.Selecionar(123, 456)
+                .Where(m => m.Operacao == TipoOperacao.Deposito)
+                .Min(m => m.Valor);
+
+            Assert.IsTrue(menorDeposito == 21);
+        }
     }
 }
