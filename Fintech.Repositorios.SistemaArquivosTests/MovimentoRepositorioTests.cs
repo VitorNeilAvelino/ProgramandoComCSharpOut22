@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Fintech.Dominio.Entidades;
 using System;
+using System.Linq;
 
 namespace Fintech.Repositorios.SistemaArquivos.Tests
 {
@@ -61,6 +62,33 @@ namespace Fintech.Repositorios.SistemaArquivos.Tests
             depositos = movimentos.FindAll(m => m.Operacao == TipoOperacao.Deposito);
 
             depositos.ForEach(d => Console.WriteLine($"{d.Operacao} - {d.Valor}"));
+        }
+
+        [TestMethod]
+        public void DelegateFuncTeste()
+        {
+            var movimentos = movimentoRepositorio.Selecionar(123, 456);
+
+            Func<Movimento, decimal> obterCampoSoma = m => m.Valor;
+
+            var totalDeposito = movimentos
+                .Where(m => m.Operacao == TipoOperacao.Deposito)
+                .Sum(RetornarCampoSoma);
+
+            totalDeposito = movimentos
+                .Where(m => m.Operacao == TipoOperacao.Deposito)
+                .Sum(obterCampoSoma);
+
+            totalDeposito = movimentos
+                .Where(m => m.Operacao == TipoOperacao.Deposito)
+                .Sum(m => m.Valor);
+
+            Console.WriteLine(totalDeposito);
+        }
+
+        private decimal RetornarCampoSoma(Movimento m)
+        {
+            return m.Valor;
         }
 
         private bool EncontrarMovimentoDeposito(Movimento m)
